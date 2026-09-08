@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>5 Years of Us ❤️</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: white;
+
+      background:
+        linear-gradient(
+          rgba(0, 0, 0, 0.48),
+          rgba(0, 0, 0, 0.72)
+        ),
+        url("us.jpg") center center / cover fixed no-repeat;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      overflow-x: hidden;
+      padding: 30px 15px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 720px;
+
+      padding: 45px 35px;
+
+      background: rgba(255, 255, 255, 0.10);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 28px;
+
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+
+      box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.45),
+        inset 0 0 30px rgba(255, 255, 255, 0.03);
+
+      text-align: center;
+
+      animation: appear 1.5s ease;
+      position: relative;
+      z-index: 2;
+    }
+
+    .heart {
+      font-size: 50px;
+      animation: heartbeat 1.5s infinite;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      letter-spacing: 4px;
+      color: #ffd1dc;
+      font-weight: 500;
+    }
+
+    h1 {
+      font-size: clamp(55px, 12vw, 90px);
+      line-height: 1;
+      margin: 12px 0;
+
+      color: #ffb6c9;
+
+      text-shadow:
+        0 0 10px rgba(255, 100, 150, 0.6),
+        0 0 30px rgba(255, 100, 150, 0.4);
+    }
+
+    .intro {
+      font-size: 18px;
+      color: #fff;
+      opacity: 0.9;
+      margin-bottom: 25px;
+    }
+
+    button {
+      border: none;
+      outline: none;
+
+      padding: 14px 32px;
+
+      border-radius: 50px;
+
+      background: linear-gradient(
+        135deg,
+        #ff477e,
+        #ff758c
+      );
+
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+
+      cursor: pointer;
+
+      box-shadow:
+        0 8px 25px rgba(255, 60, 110, 0.4);
+
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.07);
+      box-shadow:
+        0 12px 35px rgba(255, 60, 110, 0.6);
+    }
+
+    button:disabled {
+      cursor: default;
+    }
+
+    
+
+    .message {
+      display: none;
+
+      margin-top: 35px;
+      padding-top: 30px;
+
+      border-top: 1px solid rgba(255,255,255,0.2);
+
+      text-align: left;
+
+      animation: messageAppear 1s ease;
+    }
+
+    .message p {
+      font-size: 16px;
+      line-height: 1.9;
+      margin-bottom: 22px;
+
+      color: rgba(255,255,255,0.95);
+    }
+
+    .message .love {
+      text-align: center;
+
+      font-size: 25px;
+      font-weight: bold;
+
+      color: #ffb6c9;
+
+      text-shadow:
+        0 0 12px rgba(255, 100, 150, 0.8);
+    }
+
+    .signature {
+      text-align: center;
+      margin-top: 30px;
+
+      font-size: 18px;
+      color: #ffd1dc;
+    }
+
+   
+
+    .floating-heart {
+      position: fixed;
+      bottom: -50px;
+
+      pointer-events: none;
+
+      animation: floatUp linear forwards;
+
+      z-index: 1;
+    }
+
+    
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.97);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes messageAppear {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.18);
+      }
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform:
+          translateY(0)
+          rotate(0deg);
+
+        opacity: 0.8;
+      }
+
+      100% {
+        transform:
+          translateY(-110vh)
+          rotate(360deg);
+
+        opacity: 0;
+      }
+    }
+
+    
+
+    @media (max-width: 600px) {
+
+      body {
+        padding: 20px 12px;
+        align-items: flex-start;
+      }
+
+      .card {
+        margin-top: 20px;
+        padding: 35px 22px;
+      }
+
+      .message p {
+        font-size: 15px;
+        line-height: 1.85;
+      }
+
+      .subtitle {
+        font-size: 11px;
+        letter-spacing: 3px;
+      }
+
+      .intro {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+
+    <div class="heart">❤️</div>
+
+    <div class="subtitle">
+      HAPPY 5TH ANNIVERSARY
+    </div>
+
+    <h1>5 Years</h1>
+
+    <div class="intro">
+      of us, of love, and of choosing each other.
+    </div>
+
+    <button id="openButton" onclick="openLetter()">
+      Open my message 💌
+    </button>
+
+    <div class="message" id="message">
+
+      <p>
+        Thank you baby, sobra. Hindi mo alam kung gaano ko
+        na-appreciate lahat ng sinabi mo. And honestly, minsan
+        napapaisip din ako kung ano ba ginawa ko para magkaroon
+        ako ng someone like you.
+      </p>
+
+      <p>
+        5 years na tayo pero hanggang ngayon ikaw pa rin yung
+        taong gusto kong kausapin, kasama, kulitin, biruin,
+        lambingin, and makasama sa lahat.
+      </p>
+
+      <p>
+        Alam ko hindi rin ako perfect. May times na napapagod ako,
+        may times na nagagalit ako, may times din na may nasasabi
+        or nagagawa akong mali. Pero kahit ganun, never kong
+        minahal ka nang less.
+      </p>
+
+      <p>
+        Kahit may tampuhan tayo, kahit may times na hindi tayo
+        nag-uusap, hindi naman nagbabago yung gusto ko na ikaw
+        pa rin yung makasama ko. Kasi ayoko naman na kapag may
+        problema tayo, ang ending agad is susuko tayo.
+        Gusto ko matuto tayo pareho.
+      </p>
+
+      <p>
+        And baby, please don't feel bad about the times na hindi mo
+        nabigay yung attention mo sakin. Naiintindihan kita.
+        Hindi naman kita minamahal dahil kailangan mo akong
+        kausapin every second or palagi mo akong bigyan ng attention.
+        Gusto ko lang ikaw.
+      </p>
+
+      <p>
+        Kahit simpleng usap lang, kahit kulitan lang, kahit tahimik
+        lang tayo minsan, enough na sakin basta ikaw.
+      </p>
+
+      <p>
+        Sobrang na-appreciate ko rin na gusto mong maging better
+        yung relationship natin. Same din ako. Gusto ko rin na
+        mas maging peaceful tayo, mas understanding, mas patient,
+        mas kind sa isa't isa.
+      </p>
+
+      <p>
+        Hindi naman mawawala lahat ng tampuhan at misunderstandings,
+        pero sana kahit may problema tayo, lagi nating maalala
+        na hindi tayo magkalaban.
+        <strong>Tayo yung magkakampi.</strong>
+      </p>
+
+      <p>
+        And baby, yung sinabi mong gusto mong maging special yung
+        birthday ko kapag magkasama na tayo someday… hindi ko
+        kailangan ng bongga. Honestly, ikaw mismo yung gusto kong
+        kasama.
+      </p>
+
+      <p>
+        Kahit simpleng araw lang basta kasama kita, magiging
+        special na yun para sakin.
+      </p>
+
+      <p>
+        5 years na tayo baby. And after everything na pinagdaanan
+        natin, nandito pa rin tayo. Still choosing each other,
+        still trying, still loving each other.
+      </p>
+
+      <p>
+        Sobrang proud ako satin. Hindi naging perfect yung journey
+        natin pero siguro yun din yung reason kung bakit mas naging
+        strong tayo ngayon.
+      </p>
+
+      <p>
+        Thank you for loving me the way you do. Thank you for
+        seeing my efforts kahit minsan feeling ko wala lang naman
+        akong ginagawa.
+      </p>
+
+      <p>
+        Thank you sa patience mo, sa care mo, sa pag-intindi mo sakin,
+        and sa lahat ng times na pinili mo pa rin akong intindihin
+        kahit hindi ako madaling intindihin minsan.
+      </p>
+
+      <p>
+        Don't ever think na nagsasawa ako sayo or napapagod ako
+        sayo as a person.
+      </p>
+
+      <p>
+        Pwede akong mapagod sa situation, sa away, sa problema,
+        pero ikaw? Hindi.
+      </p>
+
+      <p>
+        Ikaw yung taong gusto kong ayusin yung mga bagay kasama,
+        hindi yung taong gusto kong mawala dahil nahirapan tayo.
+      </p>
+
+      <p class="love">
+        I LOVE YOU SO MUCHHH BABYYY ❤️
+      </p>
+
+      <p>
+        Thank you for these 5 years. And sana marami pa tayong
+        years na bubuuin together.
+      </p>
+
+      <p>
+        One day hindi na tayo magce-celebrate through a screen lang.
+        Gusto ko maranasan natin yung mga bagay na lagi lang nating
+        pinag-uusapan ngayon.
+      </p>
+
+      <div class="signature">
+        Here's to us. ❤️<br>
+        5 years down, forever to go.
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+
+    function openLetter() {
+
+      const message = document.getElementById("message");
+      const button = document.getElementById("openButton");
+
+      message.style.display = "block";
+
+      button.innerHTML = "I love you ❤️";
+      button.disabled = true;
+
+      createHeartBurst();
+
+      // Slowly scroll down to the message
+      setTimeout(() => {
+        message.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }, 300);
+    }
+
+
+    function createHeart() {
+
+      const heart = document.createElement("div");
+
+      heart.classList.add("floating-heart");
+
+      const hearts = [
+        "❤️",
+        "💕",
+        "💗",
+        "💖",
+        "💘",
+        "💞"
+      ];
+
+      heart.innerHTML =
+        hearts[Math.floor(Math.random() * hearts.length)];
+
+      heart.style.left =
+        Math.random() * 100 + "vw";
+
+      heart.style.fontSize =
+        (15 + Math.random() * 25) + "px";
+
+      heart.style.animationDuration =
+        (5 + Math.random() * 5) + "s";
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 10000);
+    }
+
+
+    function createHeartBurst() {
+
+      for (let i = 0; i < 30; i++) {
+
+        setTimeout(() => {
+          createHeart();
+        }, i * 100);
+
+      }
+    }
+
+
+    
+    setInterval(createHeart, 900);
+
+  </script>
+
+</body>
+</html>
